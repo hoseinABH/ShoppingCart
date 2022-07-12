@@ -1,6 +1,9 @@
 import { CSSProperties } from 'react';
+// UI Frameworks
 import { Button, Container, Nav, Navbar as NavbarBs } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+// Hooks;
+import { useCart } from '../context/cart';
 
 const CART_ICON = (
   <svg
@@ -31,6 +34,7 @@ const badgeStyles = {
 } as CSSProperties;
 
 export function Navbar() {
+  const { openCart, cartQuantity } = useCart();
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
       <Container>
@@ -49,14 +53,17 @@ export function Navbar() {
           style={{ width: '3rem', height: '3rem', position: 'relative' }}
           variant="outline-primary"
           className="rounded-circle"
+          onClick={openCart}
         >
           {CART_ICON}
-          <div
-            style={badgeStyles}
-            className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
-          >
-            3
-          </div>
+          {cartQuantity !== 0 ? (
+            <div
+              style={badgeStyles}
+              className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
+            >
+              {cartQuantity}
+            </div>
+          ) : null}
         </Button>
       </Container>
     </NavbarBs>
