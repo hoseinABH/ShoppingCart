@@ -15,8 +15,8 @@ interface Props {
 export function CartItem(props: Props) {
   const { removeFromCart } = useCart();
   const item = storeItems.find((i) => i.id === props.id);
-  if (item == null) return null;
 
+  if (item == null) return null;
   return (
     <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
       <img

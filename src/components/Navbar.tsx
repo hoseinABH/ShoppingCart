@@ -49,22 +49,22 @@ export function Navbar() {
             About
           </Nav.Link>
         </Nav>
-        <Button
-          style={{ width: '3rem', height: '3rem', position: 'relative' }}
-          variant="outline-primary"
-          className="rounded-circle"
-          onClick={openCart}
-        >
-          {CART_ICON}
-          {cartQuantity !== 0 ? (
+        {cartQuantity !== 0 ? (
+          <Button
+            style={{ width: '3rem', height: '3rem', position: 'relative' }}
+            variant="outline-primary"
+            className="rounded-circle"
+            onClick={openCart}
+          >
+            {CART_ICON}
             <div
               style={badgeStyles}
               className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
             >
               {cartQuantity}
             </div>
-          ) : null}
-        </Button>
+          </Button>
+        ) : null}
       </Container>
     </NavbarBs>
   );
