@@ -2,13 +2,13 @@ import { Route, Routes } from 'react-router-dom';
 // UI Frameworks
 import { Container } from 'react-bootstrap';
 // Components
-import { Navbar } from './components/Navbar';
+import { Navbar } from '@components/Navbar';
 // Screens
-import { Home } from './pages/Home';
-import { Store } from './pages/Store';
-import { About } from './pages/About';
+import { Home } from '@pages/Home';
+import { Store } from '@pages/Store';
+import { About } from '@pages/About';
 // Providers
-import { ShoppingCartProvider } from './context/cart';
+import { ShoppingCartProvider } from '@context/cart';
 
 function App() {
   return (

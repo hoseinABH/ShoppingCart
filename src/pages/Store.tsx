@@ -1,5 +1,5 @@
 import { Col, Row } from 'react-bootstrap';
-import { StoreCard } from '../components/Card';
+import { StoreCard } from '@components/Card';
 // Data
 import storeData from '../data/items.json';
 

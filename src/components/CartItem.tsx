@@ -1,9 +1,9 @@
 // UI Frameworks
 import { Button, Stack } from 'react-bootstrap';
 // Hooks
-import { useCart } from '../context/cart';
+import { useCart } from '@context/cart';
 // Utilities
-import { formatCurrency } from '../utils';
+import { formatCurrency } from '@utils';
 // Data
 import storeItems from '../data/items.json';
 

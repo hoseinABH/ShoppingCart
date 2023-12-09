@@ -1,8 +1,8 @@
 import { Button, Card } from 'react-bootstrap';
 // Hooks
-import { useCart } from '../context/cart';
+import { useCart } from '@context/cart';
 // Utilities
-import { formatCurrency } from '../utils';
+import { formatCurrency } from '@utils';
 
 interface Props {
   id: number;

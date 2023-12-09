@@ -3,7 +3,7 @@ import { CSSProperties } from 'react';
 import { Button, Container, Nav, Navbar as NavbarBs } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 // Hooks;
-import { useCart } from '../context/cart';
+import { useCart } from '@context/cart';
 
 const CART_ICON = (
   <svg

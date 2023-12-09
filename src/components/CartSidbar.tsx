@@ -4,9 +4,9 @@ import { Offcanvas, Stack } from 'react-bootstrap';
 // Components
 import { CartItem } from './CartItem';
 // Hooks
-import { useCart } from '../context/cart';
+import { useCart } from '@context/cart';
 // Utilities
-import { formatCurrency } from '../utils';
+import { formatCurrency } from '@utils';
 // data
 import storeItems from '../data/items.json';
 
